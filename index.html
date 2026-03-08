@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { display: ['Inter', 'sans-serif'] },
+          colors: { primary: '#2F5FF2' }
+        }
+      }
+    }
+  </script>
+  <style>
+    .fluid-bg { background: radial-gradient(circle at 0% 0%, #ff5a19 0%, #ff8f4d 40%, #f2ddd0 100%); }
+    .glass { background: rgba(255,255,255,.22); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border:1px solid rgba(255,255,255,.35); }
+    .soft-card { background: rgba(255,255,255,.35); border:1px solid rgba(31,41,55,.08); }
+    .tabbar42 { background: rgba(255,255,255,.42); }
+  </style>
+  <title>Allubooklet · Home</title>
+</head>
+<body class="font-display text-slate-800">
+  <div class="mx-auto min-h-screen max-w-[780px] fluid-bg pb-28">
+    <header class="px-6 pt-8 flex items-center justify-between text-white">
+      <div class="flex items-center gap-4">
+        <div class="size-14 rounded-full glass grid place-items-center text-2xl">👤</div>
+        <div>
+          <p class="text-4xl/none font-medium opacity-90">Welcome back,</p>
+          <h1 class="text-5xl/none font-extrabold mt-2">Alex Rivera</h1>
+        </div>
+      </div>
+      <button class="size-14 rounded-full glass grid place-items-center"><span class="material-symbols-outlined">notifications</span></button>
+    </header>
+
+    <section class="mx-6 mt-6 rounded-[2rem] glass p-6 text-white">
+      <p class="text-2xl opacity-90">Total Balance</p>
+      <h2 class="text-7xl font-extrabold mt-2">$24,560.00</h2>
+      <div class="mt-6 grid grid-cols-2 gap-4">
+        <div class="flex items-center gap-3">
+          <div class="size-16 rounded-3xl bg-emerald-200/45 grid place-items-center text-emerald-500 text-3xl">↙</div>
+          <div><p class="opacity-90 text-2xl">Income</p><p class="text-5xl font-bold">$4,250</p></div>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="size-16 rounded-3xl bg-pink-200/45 grid place-items-center text-pink-500 text-3xl">↗</div>
+          <div><p class="opacity-90 text-2xl">Expenses</p><p class="text-5xl font-bold">$1,840</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-6 mt-8">
+      <h3 class="text-5xl font-bold text-white">Quick Actions</h3>
+      <div class="mt-5 grid grid-cols-4 gap-4 text-center text-white">
+        <div><div class="size-20 rounded-full glass grid place-items-center mx-auto">➤</div><p class="mt-2 text-2xl">Send</p></div>
+        <div><div class="size-20 rounded-full glass grid place-items-center mx-auto">⇩</div><p class="mt-2 text-2xl">Request</p></div>
+        <div><div class="size-20 rounded-full glass grid place-items-center mx-auto">🧾</div><p class="mt-2 text-2xl">Bills</p></div>
+        <div><div class="size-20 rounded-full glass grid place-items-center mx-auto">⋯</div><p class="mt-2 text-2xl">More</p></div>
+      </div>
+    </section>
+
+    <section class="mx-6 mt-8">
+      <div class="flex items-center justify-between">
+        <h3 class="text-5xl font-extrabold text-slate-900">Recent Transactions</h3>
+        <a class="text-4xl font-medium" href="#">See All</a>
+      </div>
+      <div class="mt-4 space-y-4">
+        <article class="soft-card rounded-[1.8rem] p-4 flex justify-between items-center">
+          <div class="flex items-center gap-4"><div class="size-16 rounded-3xl bg-orange-200 grid place-items-center">🛍️</div><div><h4 class="text-4xl font-bold">Apple Store</h4><p class="text-3xl text-slate-500">Electronics • Today</p></div></div>
+          <p class="text-5xl text-rose-600 font-bold">-$999.00</p>
+        </article>
+        <article class="soft-card rounded-[1.8rem] p-4 flex justify-between items-center">
+          <div class="flex items-center gap-4"><div class="size-16 rounded-3xl bg-blue-200 grid place-items-center">▶</div><div><h4 class="text-4xl font-bold">Netflix</h4><p class="text-3xl text-slate-500">Entertainment • Yesterday</p></div></div>
+          <p class="text-5xl text-rose-600 font-bold">-$15.99</p>
+        </article>
+      </div>
+    </section>
+
+    <nav class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[780px] border-t border-slate-200 tabbar42 backdrop-blur-2xl">
+      <div class="px-4 pt-4 pb-7 grid grid-cols-5 items-end text-center">
+        <a class="text-primary" href="index.html"><span class="material-symbols-outlined text-4xl">home</span><p class="text-lg font-bold">HOME</p></a>
+        <a class="text-slate-400" href="analysis.html"><span class="material-symbols-outlined text-4xl">credit_card</span><p class="text-lg font-bold">CARDS</p></a>
+        <a class="-mt-8 mx-auto size-20 rounded-full bg-primary text-white grid place-items-center shadow-[0_0_30px_rgba(47,95,242,.45)]" href="add-transaction.html"><span class="material-symbols-outlined text-5xl">add</span></a>
+        <a class="text-slate-400" href="analysis.html"><span class="material-symbols-outlined text-4xl">monitoring</span><p class="text-lg font-bold">STATS</p></a>
+        <a class="text-slate-400" href="#"><span class="material-symbols-outlined text-4xl">person</span><p class="text-lg font-bold">PROFILE</p></a>
+      </div>
+    </nav>
+  </div>
+</body>
+</html>
