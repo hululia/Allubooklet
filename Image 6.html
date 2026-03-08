@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Analytics - Spending Insights</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2559f4",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#0a0c14",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .liquid-glass {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+        }
+        .vibrant-bg {
+            background: 
+                radial-gradient(circle at 0% 0%, rgba(249, 115, 22, 0.8) 0%, rgba(239, 68, 68, 0.4) 30%, transparent 70%),
+                linear-gradient(to bottom, #ffffff 0%, #ffffff 100%);
+            background-attachment: fixed;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-white font-display text-slate-800 min-h-screen flex flex-col overflow-x-hidden">
+<!-- Fluid Background Wrapper -->
+<div class="fixed inset-0 vibrant-bg -z-10"></div>
+<!-- Header Section -->
+<header class="flex items-center justify-between p-6 pt-8">
+<button class="w-10 h-10 flex items-center justify-center rounded-full liquid-glass text-slate-100 !text-white">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="text-xl font-bold tracking-tight text-white">Analytics</h1>
+<button class="w-10 h-10 flex items-center justify-center rounded-full liquid-glass text-slate-100 !text-white">
+<span class="material-symbols-outlined">calendar_today</span>
+</button>
+</header>
+<main class="flex-1 px-6 pb-24">
+<!-- Main Stats Card (Donut Chart Focus) -->
+<section class="liquid-glass rounded-xl p-6 mb-6">
+<div class="flex items-center justify-between mb-8">
+<div>
+<p class="text-slate-400 text-sm font-medium text-white/90">Total Spending</p>
+<p class="text-3xl font-bold mt-1 text-white/90 !text-white">$4,250.00</p>
+</div>
+<div class="px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full text-xs font-bold">
+                    +12.5%
+                </div>
+</div>
+<!-- Custom Donut Chart Component -->
+<div class="relative flex justify-center items-center h-48 mb-4">
+<svg class="w-44 h-44 transform -rotate-90" viewbox="0 0 100 100">
+<circle class="text-white/5" cx="50" cy="50" fill="transparent" r="40" stroke="currentColor" stroke-width="12"></circle>
+<circle class="text-primary" cx="50" cy="50" fill="transparent" r="40" stroke="currentColor" stroke-dasharray="251.2" stroke-dashoffset="60" stroke-width="12"></circle>
+<circle class="text-purple-500" cx="50" cy="50" fill="transparent" r="40" stroke="currentColor" stroke-dasharray="251.2" stroke-dashoffset="180" stroke-width="12"></circle>
+<circle class="text-pink-500" cx="50" cy="50" fill="transparent" r="40" stroke="currentColor" stroke-dasharray="251.2" stroke-dashoffset="230" stroke-width="12"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="text-sm text-slate-400 text-white/90">Target</span>
+<span class="text-lg font-bold text-white/90 !text-white">82%</span>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-2 mt-4">
+<div class="flex flex-col items-center gap-1">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<span class="text-[10px] uppercase tracking-wider text-slate-400 text-white/90">Bills</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<div class="w-2 h-2 rounded-full bg-purple-500"></div>
+<span class="text-[10px] uppercase tracking-wider text-slate-400 text-white/90">Shopping</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<div class="w-2 h-2 rounded-full bg-pink-500"></div>
+<span class="text-[10px] uppercase tracking-wider text-slate-400 text-white/90">Dining</span>
+</div>
+</div>
+</section>
+<!-- Spending Trend Section (Bar Chart) -->
+<h2 class="text-lg font-bold mb-4 px-1 text-slate-800">Spending Trend</h2>
+<section class="liquid-glass rounded-xl p-6 mb-6">
+<div class="flex items-end justify-between h-32 gap-3">
+<div class="flex-1 bg-primary/20 hover:bg-primary/40 rounded-t-lg transition-all h-[40%]"></div>
+<div class="flex-1 bg-primary/20 hover:bg-primary/40 rounded-t-lg transition-all h-[65%]"></div>
+<div class="flex-1 bg-primary/40 hover:bg-primary/60 rounded-t-lg transition-all h-[90%] border-t-2 border-primary"></div>
+<div class="flex-1 bg-primary/20 hover:bg-primary/40 rounded-t-lg transition-all h-[55%]"></div>
+<div class="flex-1 bg-primary/20 hover:bg-primary/40 rounded-t-lg transition-all h-[75%]"></div>
+<div class="flex-1 bg-primary/20 hover:bg-primary/40 rounded-t-lg transition-all h-[45%]"></div>
+<div class="flex-1 bg-primary/20 hover:bg-primary/40 rounded-t-lg transition-all h-[60%]"></div>
+</div>
+<div class="flex justify-between mt-4">
+<span class="text-xs text-slate-400 font-medium">Mon</span>
+<span class="text-xs text-slate-400 font-medium">Tue</span>
+<span class="text-xs text-slate-100 font-bold">Wed</span>
+<span class="text-xs text-slate-400 font-medium">Thu</span>
+<span class="text-xs text-slate-400 font-medium">Fri</span>
+<span class="text-xs text-slate-400 font-medium">Sat</span>
+<span class="text-xs text-slate-400 font-medium">Sun</span>
+</div>
+</section>
+<!-- Top Categories List -->
+<div class="flex justify-between items-center mb-4 px-1">
+<h2 class="text-lg font-bold text-slate-800">Top Categories</h2>
+<button class="text-primary text-sm font-bold">View All</button>
+</div>
+<div class="space-y-3">
+<div class="liquid-glass rounded-xl p-4 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-blue-500/20 flex items-center justify-center text-blue-400">
+<span class="material-symbols-outlined">shopping_bag</span>
+</div>
+<div>
+<p class="font-bold text-slate-100">Shopping</p>
+<p class="text-xs text-slate-400">24 Transactions</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-bold text-slate-100">$1,840.00</p>
+<p class="text-[10px] text-slate-500">42% of total</p>
+</div>
+</div>
+<div class="liquid-glass rounded-xl p-4 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-purple-500/20 flex items-center justify-center text-purple-400">
+<span class="material-symbols-outlined">restaurant</span>
+</div>
+<div>
+<p class="font-bold text-slate-100">Dining &amp; Bars</p>
+<p class="text-xs text-slate-400">18 Transactions</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-bold text-slate-100">$920.50</p>
+<p class="text-[10px] text-slate-500">21% of total</p>
+</div>
+</div>
+<div class="liquid-glass rounded-xl p-4 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-pink-500/20 flex items-center justify-center text-pink-400">
+<span class="material-symbols-outlined">movie</span>
+</div>
+<div>
+<p class="font-bold text-slate-100">Entertainment</p>
+<p class="text-xs text-slate-400">12 Transactions</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-bold text-slate-100">$450.00</p>
+<p class="text-[10px] text-slate-500">11% of total</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 z-50">
+<div class="flex gap-2 border-t border-slate-100 liquid-glass px-4 pb-6 pt-3 rounded-t-3xl bg-white/70 backdrop-blur-xl">
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">home</span>
+</div>
+<p class="text-[10px] font-medium leading-normal tracking-wide">Home</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">pie_chart</span>
+</div>
+<p class="text-[10px] font-medium leading-normal tracking-wide">Analytics</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+</div>
+<p class="text-[10px] font-medium leading-normal tracking-wide">Wallet</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">person</span>
+</div>
+<p class="text-[10px] font-medium leading-normal tracking-wide">Profile</p>
+</a>
+</div>
+</nav>
+</body></html>

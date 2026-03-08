@@ -1,0 +1,182 @@
+<html class=""><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2559f4",
+                        "background-light": "#ffffff",
+                        "background-dark": "#101422",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }</script>
+<style>
+        .liquid-glass {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(20px) saturate(160%);
+            -webkit-backdrop-filter: blur(20px) saturate(160%);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+        }
+        .vibrant-gradient {
+            background: radial-gradient(circle at top left, #ffedd5 0%, #fee2e2 20%, #fef2f2 40%, #ffffff 70%);
+            background-attachment: fixed;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="font-display text-slate-900 min-h-screen">
+<div class="relative flex h-full min-h-screen w-full flex-col vibrant-gradient overflow-x-hidden bg-white">
+<!-- Header -->
+<div class="flex items-center p-4 justify-between sticky top-0 z-10 backdrop-blur-xl bg-white/10">
+<button class="flex size-10 items-center justify-center rounded-full hover:bg-white/10 transition-colors text-slate-900">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h2 class="text-lg font-bold leading-tight tracking-tight flex-1 text-center pr-10 text-slate-900">Settings</h2>
+</div>
+<div class="flex flex-col gap-6 p-4 pb-32">
+<!-- Profile Section -->
+<div class="liquid-glass rounded-xl p-6 flex flex-col items-center gap-4">
+<div class="relative">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-24 w-24 border-2 border-primary/50 shadow-lg shadow-primary/20" data-alt="Cute cat avatar sketch" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAyB3wpVMC2B5iolLsMwJZAxhJM6cUk8pc31ZNxLifu4rEoaOQeZkc1Nk3DSJ9GA-J5LPX_SdIRuGZZGCEUiL5mQ7JcvqZBZku7fAzWRppTeILH-UizovcM6KOq_rxTSF2HoLReEZFuRHaGoqump9_JP8GwQqAtLmTX5B8HT46NMQ0YgkHxBFs3CDrcgGZFXW5lvsXjNoaoeCJSw0p0GcXlXNYc6J0-GagjqnVHXsaPZJMJk6Qo1FQ34i_6k0vXOuIcq3nqxMiY8I8');">
+</div>
+<div class="absolute bottom-0 right-0 bg-primary p-1.5 rounded-full border-2 border-background-dark">
+<span class="material-symbols-outlined text-white text-xs">edit</span>
+</div>
+</div>
+<div class="text-center">
+<p class="text-xl font-bold text-slate-900">Alex Rivers</p>
+<p class="text-slate-500 text-sm">alex.rivers@example.com</p>
+</div>
+<button class="flex items-center justify-center rounded-lg h-10 px-6 bg-primary text-white text-sm font-bold w-full hover:bg-primary/90 transition-all">
+                    Edit Profile
+                </button>
+</div>
+<!-- Asset Management -->
+<div class="flex flex-col gap-3">
+<h3 class="text-sm font-semibold uppercase tracking-wider px-1 text-slate-800">Asset Management</h3>
+<div class="liquid-glass rounded-xl p-4 flex gap-4 items-center">
+<div class="flex-1">
+<p class="text-slate-500 text-sm">Primary Device</p>
+<p class="text-lg font-bold text-slate-900">MacBook Pro 14"</p>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-primary text-sm font-bold">$2,499.00</span>
+<span class="bg-primary/20 text-primary text-[10px] px-1.5 py-0.5 rounded font-bold uppercase">Insured</span>
+</div>
+<button class="mt-4 flex items-center justify-center rounded-lg h-8 px-4 bg-white/10 text-slate-100 text-xs font-semibold hover:bg-white/20 transition-all">
+                            Manage Asset
+                        </button>
+</div>
+<div class="w-32 h-24 bg-center bg-no-repeat bg-cover rounded-lg shadow-inner bg-slate-800/50" data-alt="Silver MacBook Pro laptop on clean background" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBk8H-UbLTZ2v0RtP8pH25MpQPKXzgHwVLVC2DXJSwj_lgHLFF0K2B7knAhoZX9ZxTxeOW9F0S_pCi_5Vpz0FyFPogw2_EyKpzCu9h28DRt2T5Jnbs7sbTP61WzqwvSLg0J-cDQej8n5_ECQmKeUEYBu_G4KGvMZdvGDUXkOYypbiBvOe68pFVrPFFeX1LUwVmXP29E0MJw7-a4MxLo6u3svuFm68K_Hb5ln4oY0fMQWTSWtASQhw3iyXnajLtTGYIV06B66_Th9-Q");'></div>
+</div>
+</div>
+<!-- Preferences -->
+<div class="flex flex-col gap-3">
+<h3 class="text-sm font-semibold uppercase tracking-wider px-1 text-slate-800">Preferences</h3>
+<div class="liquid-glass rounded-xl divide-y divide-white/10">
+<!-- Day/Night Switch -->
+<div class="flex items-center justify-between p-4">
+<div class="flex items-center gap-3">
+<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-orange-500/20 text-orange-500">
+<span class="material-symbols-outlined">dark_mode</span>
+</div>
+<span class="font-medium text-slate-900">Dark Mode</span>
+</div>
+<div class="relative inline-flex items-center cursor-pointer">
+<div class="w-11 h-6 bg-primary rounded-full peer"></div>
+<div class="absolute left-6 top-1 bg-white w-4 h-4 rounded-full transition-all"></div>
+</div>
+</div>
+<!-- Language Switch -->
+<div class="p-4">
+<div class="flex items-center gap-3 mb-4">
+<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-500/20 text-emerald-500">
+<span class="material-symbols-outlined">language</span>
+</div>
+<span class="font-medium text-slate-900">Language</span>
+</div>
+<div class="relative w-full">
+<select class="w-full bg-white/10 border-none rounded-lg py-2 px-3 text-sm text-slate-900 focus:ring-2 focus:ring-primary/50 appearance-none cursor-pointer">
+<option selected="" value="en">English</option>
+<option value="zh-hant">繁體</option>
+<option value="zh-hans">简体</option>
+<option value="ja">日本語</option>
+<option value="ko">한국어</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-slate-500">
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Security & Support -->
+<div class="flex flex-col gap-3">
+<div class="liquid-glass rounded-xl divide-y divide-white/10">
+<button class="flex items-center justify-between w-full p-4 hover:bg-white/5 transition-all text-left">
+<div class="flex items-center gap-3">
+<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-500/20 text-blue-500">
+<span class="material-symbols-outlined">shield</span>
+</div>
+<span class="font-medium text-slate-900">Security &amp; Privacy</span>
+</div>
+<span class="material-symbols-outlined text-slate-500">chevron_right</span>
+</button>
+<button class="flex items-center justify-between w-full p-4 hover:bg-white/5 transition-all text-left">
+<div class="flex items-center gap-3">
+<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-pink-500/20 text-pink-500">
+<span class="material-symbols-outlined">help</span>
+</div>
+<span class="font-medium text-slate-900">Help &amp; Support</span>
+</div>
+<span class="material-symbols-outlined text-slate-500">chevron_right</span>
+</button>
+</div>
+</div>
+<button class="flex items-center justify-center gap-2 w-full p-4 rounded-xl text-red-400 font-bold hover:bg-red-500/10 transition-all">
+<span class="material-symbols-outlined">logout</span>
+                Log Out
+            </button>
+</div>
+<!-- Bottom Navigation -->
+<div class="fixed bottom-0 left-0 right-0 z-20">
+<div class="flex gap-2 border-t border-slate-200 bg-white/80 backdrop-blur-xl px-4 pb-6 pt-3">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">home</span>
+<p class="text-[10px] font-bold uppercase tracking-wider">Home</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">monitoring</span>
+<p class="text-[10px] font-bold uppercase tracking-wider">Market</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">swap_horiz</span>
+<p class="text-[10px] font-bold uppercase tracking-wider">Trade</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+<p class="text-[10px] font-bold uppercase tracking-wider">Wallet</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">settings</span>
+<p class="text-[10px] font-bold uppercase tracking-wider">Settings</p>
+</a>
+</div>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Finance App - Glassmorphism Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2559f4",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101422",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .liquid-bg {
+            background: linear-gradient(135deg, #ff4d00 0%, #ff8c42 20%, #ffffff 70%, #ffffff 100%);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        .dark-glass-card {
+            background: rgba(0, 0, 0, 0.05);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="font-display bg-white text-slate-900 min-h-screen overflow-x-hidden">
+<!-- Vibrant Fluid Gradient Background -->
+<div class="liquid-bg"></div>
+<div class="relative flex flex-col min-h-screen pb-24">
+<!-- Header -->
+<header class="flex items-center justify-between p-6 pt-8">
+<div class="flex items-center gap-3">
+<div class="size-12 rounded-full glass-card flex items-center justify-center overflow-hidden border-2 border-white/20">
+<img alt="User profile avatar" class="size-full object-cover" data-alt="User profile avatar close up" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDf-jrNyln20SdxZw2ksdVXWdTK4tow07dWBE1lb7m8EDMJq6QwsKaUAtaoOd_2j6xqf1OmgcAvKop8I2xRapcmYPviisdTTrwi3Ifs2zysowB86-V2V8WJkSRAd-iWHPTI9YaghuHrGFxu0aHGjnBOWEsWkUxFEkjOo6wYEcrPDOA85o2H8W_Wl7eAoqbuEHrHfLj1__3hqPRVvcvGVv_vvbRndJn_wS5Jy5y7zho2uHUth_QouZQ4FcSnY5SzcHJsuVEabA6v7qs"/>
+</div>
+<div>
+<p class="text-xs text-white/70 font-medium">Welcome back,</p>
+<h2 class="text-lg font-bold text-white leading-none">Alex Rivera</h2>
+</div>
+</div>
+<button class="size-12 rounded-full glass-card flex items-center justify-center text-white">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</header>
+<!-- Main Balance Section -->
+<section class="px-6 mb-8">
+<div class="glass-card rounded-xl p-6 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-20">
+<span class="material-symbols-outlined text-6xl text-white">account_balance_wallet</span>
+</div>
+<p class="text-sm font-medium text-white/70 mb-1">Total Balance</p>
+<h1 class="text-4xl font-bold text-white mb-6">$24,560.00</h1>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-lg bg-emerald-500/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-emerald-400">south_west</span>
+</div>
+<div>
+<p class="text-xs text-white/60">Income</p>
+<p class="text-base font-bold text-white">$4,250</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-lg bg-rose-500/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-rose-400">north_east</span>
+</div>
+<div>
+<p class="text-xs text-white/60">Expenses</p>
+<p class="text-base font-bold text-white">$1,840</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Quick Actions -->
+<section class="px-6 mb-8">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-lg font-bold text-white">Quick Actions</h3>
+</div>
+<div class="grid grid-cols-4 gap-4">
+<div class="flex flex-col items-center gap-2">
+<div class="size-14 glass-card rounded-full flex items-center justify-center text-white">
+<span class="material-symbols-outlined">send</span>
+</div>
+<p class="text-xs font-medium text-white/80">Send</p>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="size-14 glass-card rounded-full flex items-center justify-center text-white">
+<span class="material-symbols-outlined">download</span>
+</div>
+<p class="text-xs font-medium text-white/80">Request</p>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="size-14 glass-card rounded-full flex items-center justify-center text-white">
+<span class="material-symbols-outlined">receipt_long</span>
+</div>
+<p class="text-xs font-medium text-white/80">Bills</p>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="size-14 glass-card rounded-full flex items-center justify-center text-white">
+<span class="material-symbols-outlined">more_horiz</span>
+</div>
+<p class="text-xs font-medium text-white/80">More</p>
+</div>
+</div>
+</section>
+<!-- Recent Transactions -->
+<section class="px-6 flex-1">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-lg font-bold text-slate-800">Recent Transactions</h3>
+<button class="text-sm font-medium bg-white/10 px-3 py-1 rounded-full text-slate-800">See All</button>
+</div>
+<div class="space-y-3">
+<!-- Transaction Item -->
+<div class="dark-glass-card rounded-lg p-4 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-lg bg-orange-500/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-orange-600">shopping_bag</span>
+</div>
+<div>
+<p class="text-sm font-bold text-slate-800">Apple Store</p>
+<p class="text-xs text-slate-500">Electronics • Today</p>
+</div>
+</div>
+<p class="text-sm font-bold text-rose-600">-$999.00</p>
+</div>
+<!-- Transaction Item -->
+<div class="dark-glass-card rounded-lg p-4 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-lg bg-blue-500/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-blue-600">subscriptions</span>
+</div>
+<div>
+<p class="text-sm font-bold text-slate-800">Netflix</p>
+<p class="text-xs text-slate-500">Entertainment • Yesterday</p>
+</div>
+</div>
+<p class="text-sm font-bold text-rose-600">-$15.99</p>
+</div>
+<!-- Transaction Item -->
+<div class="dark-glass-card rounded-lg p-4 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-lg bg-emerald-500/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-emerald-600">payments</span>
+</div>
+<div>
+<p class="text-sm font-bold text-slate-800">Salary Deposit</p>
+<p class="text-xs text-slate-500">Income • 2 days ago</p>
+</div>
+</div>
+<p class="text-sm font-bold text-emerald-600">+$3,200.00</p>
+</div>
+<!-- Transaction Item -->
+<div class="dark-glass-card rounded-lg p-4 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-lg bg-purple-500/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-purple-600">restaurant</span>
+</div>
+<div>
+<p class="text-sm font-bold text-slate-800">Blue Bottle Coffee</p>
+<p class="text-xs text-slate-500">Food • 3 days ago</p>
+</div>
+</div>
+<p class="text-sm font-bold text-rose-600">-$6.50</p>
+</div>
+</div>
+</section>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 glass-nav px-4 pb-8 pt-4 z-50">
+<div class="flex justify-around items-center max-w-md mx-auto">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined fill-1 text-primary">house</span>
+</div>
+<p class="text-[10px] font-bold uppercase tracking-wider">Home</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">credit_card</span>
+</div>
+<p class="text-[10px] font-bold uppercase tracking-wider">Cards</p>
+</a>
+<div class="-mt-12 flex flex-col items-center">
+<button class="size-14 rounded-full bg-primary flex items-center justify-center text-white shadow-lg shadow-primary/30 border-4 border-white">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+</div>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">query_stats</span>
+</div>
+<p class="text-[10px] font-bold uppercase tracking-wider">Stats</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">person</span>
+</div>
+<p class="text-[10px] font-bold uppercase tracking-wider">Profile</p>
+</a>
+</div>
+</nav>
+</div>
+</body></html>
